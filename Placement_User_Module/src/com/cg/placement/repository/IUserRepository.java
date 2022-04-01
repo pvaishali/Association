@@ -6,7 +6,7 @@ public interface IUserRepository {
 
 	public User addnewUser(User user) ;
 	public User updateUser(User user);
-	void deleteStudent(int id);
+	void deleteUser(int id);
 	public abstract void beginTransaction();
 	public abstract void commitTrasaction();
 	public void login(User user);

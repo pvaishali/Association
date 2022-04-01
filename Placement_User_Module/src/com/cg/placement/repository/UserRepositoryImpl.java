@@ -1,6 +1,7 @@
 package com.cg.placement.repository;
 
 import javax.persistence.EntityManager;
+
 import com.cg.placement.entities.User;
 
 public class UserRepositoryImpl implements IUserRepository{
@@ -21,13 +22,7 @@ public class UserRepositoryImpl implements IUserRepository{
 		return user;
 	}
 
-	@Override
-	public void deleteStudent(int id) {
-		// TODO Auto-generated method stub
-		User user = entityManager.find(User.class, id);
-		entityManager.remove(user);
-		
-	}
+	
 
 	@Override
 	public void beginTransaction() {
@@ -48,6 +43,13 @@ public class UserRepositoryImpl implements IUserRepository{
 	@Override
 	public void logout() {
 		entityManager.getTransaction().commit();
+	}
+	@Override
+	public void deleteUser(int id) {
+
+		User user = entityManager.find(User.class, id);
+		entityManager.remove(user);
+		
 	}
 }
 
