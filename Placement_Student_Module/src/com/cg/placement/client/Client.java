@@ -1,5 +1,6 @@
 package com.cg.placement.client;
 
+import com.cg.placement.entities.Certificate;
 import com.cg.placement.entities.Student;
 import com.cg.placement.service.IStudentService;
 import com.cg.placement.service.StudentServiceImpl;
@@ -9,22 +10,29 @@ public class Client {
 	// CRUD operation calling activity
 	Student student = new Student();
 	
-	IStudentService service = new StudentServiceImpl();
+	
 	
 	// Create
-	student.setId(4);
-	student.setName("vaishu");
+	//student.setId(4);
+	student.setName("teju");
 	student.setRoll(49);
-	student.setQualification("MS");
-	student.setCourse("EC");
+	student.setQualification("bg");
+	student.setCourse("eEC");
 	student.setYear(2023);
-	student.setCertificate("ST");
 	student.setHallTicketNo(111);
-	student.setCollege("Ranchi University");
+	student.setCollege(" University");
+	
+	Certificate certificate=new Certificate();
+	certificate.setYear(2021);
+	certificate.setCollege("vv");
+	student.setCertificate(certificate);
+	certificate.setStudent(student);
+	
+	IStudentService service = new StudentServiceImpl();
 	service.addStudent(student);
 	
 	// Retrieve
-	
+	/*
 	student	= service.searchStudentById(1);
 	System.out.println("ID is:"+student.getId());
 	System.out.println("Roll is:"+student.getRoll());
@@ -34,9 +42,9 @@ public class Client {
 	// Update
 	student	= service.searchStudentById(1);
 	student.setCollege("rv University");
-	service.updateStudent(student);
+	service.updateStudent(student);*/
 	
-	System.out.println("Update is successful");
+	System.out.println("done is successful");
 	
 	
 	

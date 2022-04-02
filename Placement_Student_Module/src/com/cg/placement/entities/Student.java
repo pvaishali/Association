@@ -1,13 +1,19 @@
 package com.cg.placement.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="students")
+@Table(name="student")
 public class Student {
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private String college;
@@ -15,7 +21,10 @@ public class Student {
 	private String qualification;
 	private String course;
 	private int year;
-	private String certificate;
+
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="certificate_id")
+	private Certificate certificate;
 	private int hallTicketNo;
 	public int getId() {
 		return id;
@@ -59,10 +68,10 @@ public class Student {
 	public void setYear(int year) {
 		this.year = year;
 	}
-	public String getCertificate() {
+	public Certificate getCertificate() {
 		return certificate;
 	}
-	public void setCertificate(String certificate) {
+	public void setCertificate(Certificate certificate) {
 		this.certificate = certificate;
 	}
 	public int getHallTicketNo() {
@@ -71,4 +80,6 @@ public class Student {
 	public void setHallTicketNo(int hallTicketNo) {
 		this.hallTicketNo = hallTicketNo;
 	}
+	
+	
 }
