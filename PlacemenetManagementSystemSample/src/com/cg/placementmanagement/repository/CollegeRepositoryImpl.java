@@ -3,7 +3,7 @@ package com.cg.placementmanagement.repository;
 import javax.persistence.EntityManager;
 
 import com.cg.placementmanagement.entities.College;
-import com.cg.placementmanagement.entities.Placement;
+
 
 public class CollegeRepositoryImpl implements ICollegeRepository {
 
@@ -53,11 +53,11 @@ public class CollegeRepositoryImpl implements ICollegeRepository {
 		entityManager.getTransaction().commit();
 	}
 
-	@Override
-	public boolean schedulePlacement(Placement placement) {
-		entityManager.persist(placement);
-		return true;
-	}
+//	@Override
+//	public boolean schedulePlacement(Placement placement) {
+		//entityManager.persist(placement);
+	//	return true;
+	//}//
 
 	
 

@@ -1,7 +1,7 @@
 package com.cg.placementmanagement.repository;
 
 import com.cg.placementmanagement.entities.College;
-import com.cg.placementmanagement.entities.Placement;
+
 
 
 public interface ICollegeRepository {
@@ -12,6 +12,6 @@ public interface ICollegeRepository {
     
     public abstract void beginTransaction();
     public abstract void commitTransaction();
-	public boolean schedulePlacement(Placement placement);
+	//public boolean schedulePlacement(Placement placement);
 	
 }

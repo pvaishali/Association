@@ -1,7 +1,6 @@
 package com.cg.placementmanagement.service;
 
 import com.cg.placementmanagement.entities.College;
-import com.cg.placementmanagement.entities.Placement;
 import com.cg.placementmanagement.repository.CollegeRepositoryImpl;
 import com.cg.placementmanagement.repository.ICollegeRepository;
 
@@ -45,12 +44,6 @@ public class CollegeServiceImpl implements ICollegeService{
 	    dao.commitTransaction();
 		return false;
 	}
-	@Override
-	public Boolean schedulePlacement(Placement placement) {
-		dao.beginTransaction();
-	    dao.schedulePlacement(placement);
-	    dao.commitTransaction();
-		return true;
-	}
+	
 
 }

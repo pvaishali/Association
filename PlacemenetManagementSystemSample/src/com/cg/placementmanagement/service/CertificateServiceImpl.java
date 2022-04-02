@@ -3,11 +3,11 @@ import com.cg.placementmanagement.entities.Certificate;
 import com.cg.placementmanagement.repository.CertificateRepositoryImpl;
 import com.cg.placementmanagement.repository.ICertificateRepository;
 
-public class CertifiateServiceImpl implements ICertificateService {
+public class CertificateServiceImpl implements ICertificateService {
 
 	// Step 1: Establishing connection between Service and Repo
 	private ICertificateRepository dao;
-	public CertifiateServiceImpl()
+	public CertificateServiceImpl()
 	{
 		dao= new CertificateRepositoryImpl();
 	}
