@@ -1,8 +1,8 @@
-package com.cg.placement.repository;
+package com.cg.placementmanagement.repository;
 
 import javax.persistence.EntityManager;
 
-import com.cg.placement.entities.User;
+import com.cg.placementmanagement.entities.User;
 
 public class UserRepositoryImpl implements IUserRepository{
 	private EntityManager entityManager;
@@ -37,6 +37,8 @@ public class UserRepositoryImpl implements IUserRepository{
 	}
 	@Override
 	public void login(User user) {
+		
+		
 		entityManager.getTransaction().begin();
 	}
 	@Override
